@@ -9,8 +9,8 @@ return new class extends Migration {
         Schema::create('modules', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->integer('internal_module_id');
-            $table->timestamps();
+            $table->integer('internal_module_id')->unique();
+            // $table->timestamps();
         });
     }
 
